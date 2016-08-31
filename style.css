@@ -3,7 +3,7 @@
 }
 
 * {
-      /*outline: 1px solid red;*/
+      outline: 1px solid red;
       font-family: Arial;
 }
 
@@ -12,6 +12,8 @@
     background: #fff;
     border: 1px solid #dddddd;
     margin: 61px auto 0;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .header{
@@ -20,7 +22,7 @@
 }
 
 .header__logo{
-    margin: 20px 0 0 30px;
+    margin: 20px 0 0 10px;
 }
 
 .header__heading{
@@ -31,10 +33,6 @@
 .header__description{
     font: 11px Arial;
     color: #999999;
-}
-
-.header__menu{
-    margin-right: 20px;
 }
 
 .header__menu:after{
@@ -173,4 +171,133 @@
     -moz-border-radius: 3px 3px 3px 3px;
     -webkit-border-radius: 3px 3px 3px 3px;
     border: 0 solid #000000;
+}
+
+.carousel{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.carousel__imagewrapper{
+    margin: 33px 70px 55px 56px;
+    width: 300px;
+    box-shadow: 0 29px 16px -25px rgba(0,0,0,0.45);
+}
+
+.carousel__boxforimage{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    box-shadow: inset 0 0 8px 4px rgba(0,0,0,0.25);
+}
+
+.carousel__img {
+    position: relative;
+}
+
+.carousel__img img{
+    margin-bottom: -4px;
+}
+
+.imagedesc{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.leftarrow, .rightarrow{
+    background: url("images/carousel_arrows.png");
+    width: 32px;
+    height: 49px;
+}
+
+.rightarrow{
+    background-position: -32px 0;
+}
+
+.imagedesc__text{
+    flex-grow: 1;
+    margin: 0 3px;
+    background: rgba(0,0,0,0.5);
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.imagedesc__text p{
+    line-height: 18px;
+}
+
+.imagedesk__title{
+    color: #f6f6f6;
+    font: 13px Arial;
+}
+
+.imagedesc__description {
+    font: 11px Arial;
+    color: #ffc14c;
+}
+
+.imagedesc__description_description {
+    color: #676767;
+}
+
+.carousel__text {
+    padding: 50px 70px 0 0;
+    text-align: right;
+}
+
+.carousel__heading{
+    font: 38px "Oxygen";
+    color: #515151;
+}
+
+.carousel__description {
+    font: 14px "Oxygen";
+    color: #666666;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f6f6f6;
+    margin-top: 8px;
+}
+
+.button {
+    box-sizing: border-box;
+    margin-top: 10px;
+    padding: 7px;
+    display: inline-flex;
+    border-radius: 3px;
+    background: linear-gradient(to bottom, rgba(255,198,84,1) 0%, rgba(255,190,68,1) 100%);
+    box-shadow: inset 0 0 1px 1px rgba(0,0,0,0.05);
+    border: 1px solid #efac3c;
+}
+
+.button__section1 {
+    flex-grow: 1;
+    padding-right: 22px;
+    border-right: 1px solid #ffac35;
+    text-align: left;
+}
+
+.button__section2 {
+    width: 32px;
+    border-left: 1px solid #ffc65c;
+}
+
+.button:hover .button__section2 {
+    background: url("images/button_arrow.png") center no-repeat;
+}
+
+.button__title {
+    color: #ffffff;
+    font: 17px Oxygen;
+    text-shadow: 0 -1px 2px rgba(198, 141, 30, 0.7);
+    text-transform: capitalize;
+}
+
+.button__description {
+    font: bold 10px Arial;
+    text-transform: uppercase;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+    color: #d28600;
 }
